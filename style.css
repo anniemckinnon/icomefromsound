@@ -1,0 +1,251 @@
+body {
+    font-family: Arial, sans-serif;
+    padding-left: 5vw; /* Adds 20 pixels of padding on the left */
+    padding-right: 5vw; /* Adds 20 pixels of padding on the right */
+    padding-top: 10vw;
+  }
+
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* center vertically */
+    padding: 1rem;
+    background-color: white;
+    width: 100%;
+    z-index: 1;
+    box-sizing: border-box;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: #000; /* Always black */
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-style: normal; /* Normal by default */
+    transition: font-style 0.2s ease;
+  }
+  
+  
+  .logo a:hover {
+    font-style: italic; /* Italic when clicked */
+  }
+
+  .menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* align links to the right */
+
+  }
+  
+  
+   
+
+
+  nav {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 1rem;
+  justify-content: flex-end; /* aligns nav content to the right */
+  z-index: 5;
+ 
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+  }
+
+  nav a:hover {
+    font-style: italic; /* Italic when clicked */
+  }
+
+  
+body h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+body h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+body p {
+  font-size: 1 rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+  
+  @media (max-width: 600px) {
+    .menu-wrapper {
+      align-items: flex-end;
+    }
+  }
+
+  
+
+
+/* Main content container */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Each content block */
+.block {
+  max-width: 30vw;
+  min-width: 300px;
+  max-height: 566px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+/* Image container */
+.image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Images */
+.image-container img {
+  width: 100%;
+  max-height: 40vw;
+  display: block;
+  object-fit: cover;
+  align-items: center;
+}
+
+/* Images */
+.image-container video {
+  width: 100%;
+  max-height: 40vw;
+  display: block;
+  object-fit: cover;
+  align-items: center;
+}
+
+
+/* Each content block */
+.block2 {
+  max-width: 60vw;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+/* Image container */
+.image-container2 {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Images */
+.image-container2 video {
+  width: 100%;
+  max-height: 60vw;
+  display: block;
+  object-fit: cover;
+  align-items: center;
+}
+
+
+/* Text overlay box */
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  color: black;
+  padding: 1px;
+  transform: translateY(-100%); /* hidden above the image */
+  transition: transform 0.4s ease;
+  text-align: left;
+  font-style: italic;
+}
+
+/* Hover effect: slide text down */
+.image-container:hover .text-overlay {
+  transform: translateY(0);
+}
+
+/* Hover effect: slide text down */
+.image-container2:hover .text-overlay {
+  transform: translateY(0);
+}
+
+.text-overlay p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: black;
+}
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu-wrapper {
+    display: none;
+    position: absolute;
+    top: 60px; /* below header */
+    left: 0;
+    right: 0;
+    background-color: white;
+    text-align: right;
+    padding: 1rem 2rem;
+    z-index: 999;
+  }
+
+  .menu-wrapper.show {
+    display: block;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  nav a {
+    padding: 0.5rem 0;
+  }
+}
+
+
